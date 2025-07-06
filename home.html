@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="home.html" class="logo">
+            <i class="ri-star-s-line"></i>Master of furniture
+        </a>
+        <div class="icons">
+            <div id="ri-menu-line" class="ri-menu-line"></div>
+        </div>
+        <div class="dropdown-container">
+            <div class="dropdown1">
+                <div class="select1">
+                    <span class="selected1">Русский</span>
+                    <div class="caret1"></div>
+                </div>
+                <ul class="menu1">
+                    <li data-value="en">English</li>
+                    <li data-value="ru" class="active1">Русский</li>
+                    <li data-value="uz">O'zbekcha</li>
+            </div> 
+        </div>
+        
+    </header>
+    
+    <style>
+        .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: #f0e8e4;
+    flex-direction: column
+    ;
+}
+
+.dropdown-container {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 10px;
+    transform: none;
+    width: 20%;
+    margin: 0rem 0;
+    order: 3;
+}
+
+/* Dropdown stilleri */
+.dropdown1 {
+    width: 100%;
+}
+
+.dropdown1 * {
+    box-sizing: border-box;
+}
+
+.select1 {
+    position: relative;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px #5e473e solid;
+    border-radius: 0.5em;
+    padding: 1em;
+    cursor: pointer;
+    background-color: #5e473e;
+    transition: background 0.3s;
+}
+
+.select1-clicked {
+    border: 2px #b58d7e solid;
+    box-shadow: 0 0 0.8em #5e473e;
+}
+
+.select1:hover {
+    background-color: #845f51;
+}
+
+.caret1 {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+
+.caret1-rotate {
+    transform: rotate(180deg);
+}
+
+.menu1 {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #5e473e;
+    border: #b58d7e 1px solid;
+    border-radius: 0.5em;
+    position: absolute;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    color: #f0e8e4;
+    top: 3em;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.menu1 li {
+    padding: 0.7em 0.5em;
+    cursor: pointer;
+    border-radius: 0.5em;
+    margin: 0.3em 0;
+}
+
+.menu1 li:hover {
+    background-color: #b58d7e;
+}
+
+.active1 {
+    background-color: #845f51;
+}
+
+.menu1-open {
+    display: block;
+    opacity: 1;
+}
+    </style>  
+    <div id="closer" class="ri-close-line"></div>
+    <nav class="navbar">
+        <a href="home.html" class="active">Главное Меню</a>
+        <a href="products.html" id="a1">Мебели</a>
+        <a href="about.html" id="a2">О нас</a>
+        <a href="team.html" id="a3">Команда</a>
+        <a href="services.html" id="a4">Услуги</a>
+        <a href="contact.html" id="a5">Контакт</a>
+    </nav>
+    
+    
+    <script src="script.js"></script>
+    
+    </div>
+    <section class="home" id="home">
+        <section class="slider">
+            <div class="bg-[url(/img/mountains.jpg)] bg-cover bg-center">
+                <div class="list">
+                    <div class="item">
+                        <img src="images/111.jpg" alt="">
+                        <div class="content">
+                            <div class="title" >master for furniture</div>
+                            <div class="description" id="a32">
+                                Мы лучшая мебельная компания в мире
+                            </div>
+                            <div class="qq">
+                                <a href="products.html" class="btn" id="a33">Начать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="category py-10"> 
+        <div class="text-3xl font-bold uppercase text-center mb-6" style="display: flex; padding: 2rem; font-size: 4rem; font-family: sans-serif; color:#845f51" id="a31">Каталог</div>
+         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6">
+            <div class="text-center">    
+                <img src="images/bedroom.jpg" href="catalog/badroom.html" alt="Спальный гарнитур" class="w-full h-48 object-cover rounded-xl">
+                <a class="mt-2 text-lg font-medium" style="color: #845f51; font-size: 2rem; padding: 1rem;" href="catalog/badroom.html" id="a12" >Спальный гарнитур</a>
+            </div>
+            <div class="text-center">
+                <img src="images/124.jpg" alt="Гостиный гарнитур" class="w-full h-48 object-cover rounded-xl">
+                <a class="mt-2 text-lg font-medium" style="color: #845f51; font-size: 2rem; padding: 1rem;" href="catalog/seatingroom.html" id="a13">Гостиный гарнитур</a>
+            </div>
+            <div class="text-center">
+                <img src="images/images (1).jpg" alt="Мягкая мебель" class="w-full h-48 object-cover rounded-xl">
+                <a class="mt-2 text-lg font-medium" style="color: #845f51; font-size: 2rem; padding: 1rem;" href="catalog/mebel.html" id="a14">Мягкая мебель</a>
+            </div>
+            <div class="text-center">
+                <img src="images/images (4).jpg" alt="Офисная мебель" class="w-full h-48 object-cover rounded-xl">
+                <a class="mt-2 text-lg font-medium" style="color: #845f51; font-size: 2rem; padding: 1rem;" href="catalog/office.html" id="a15">Офисная мебель</a>
+            </div>
+            <div class="text-center">
+                <img src="images/kitchen.jpg" alt="Кухонная мебель" class="w-full h-48 object-cover rounded-xl">
+                <a class="mt-2 text-lg font-medium" style="color: #845f51; font-size: 2rem; padding: 1rem;" href="catalog/kitchen.html" id="a16">Кухонная мебель</a>
+            </div>
+            <div class="text-center">
+                <img src="images/127.jpg" alt="Мебель для кафе" class="w-full h-48 object-cover rounded-xl">
+                <a class="mt-2 text-lg font-medium" style="color: #845f51; font-size: 2rem; padding: 1rem;" href="catalog/cafe.html" id="a17">Мебель для кафе</a>
+            </div>
+            <div class="text-center">
+                <img src="images/table.jpg" alt="Стол и стулья" class="w-full h-48 object-cover rounded-xl">
+                <a class="mt-2 text-lg font-medium" style="color: #845f51; font-size: 2rem; padding: 1rem;" href="catalog/stol.html" id="a18">Стол и стулья</a>
+            </div>
+            <div class="text-center">
+                <img src="images/childroom.jpg" alt="Детская мебель" class="w-full h-48 object-cover rounded-xl">
+                <a class="mt-2 text-lg font-medium" style="color: #845f51; font-size: 2rem; padding: 1rem;" href="catalog/child.html" id="a19">Детская мебель</a>
+            </div>
+            <div class="text-center">
+                <img src="images/130.jpg" alt="Гардеробная" class="w-full h-48 object-cover rounded-xl">
+                <a class="mt-2 text-lg font-medium" style="color: #845f51; font-size: 2rem; padding: 1rem;" href="catalog/garderob.html"id="a20">Гардеробная</a>
+            </div>
+            <div class="text-center">
+                <img src="images/131.jpg" alt="Мебель для ванной" class="w-full h-48 object-cover rounded-xl">
+                <a class="mt-2 text-lg font-medium" style="color: #845f51; font-size: 2rem; padding: 1rem;" href="catalog/toielet.html" id="a21">Мебель для ванной</a>
+            </div>
+            <div class="text-center">
+                <img src="images/132.jpg" alt="Мебель для прихожей" class="w-full h-48 object-cover rounded-xl">
+                <a class="mt-2 text-lg font-medium" style="color: #845f51; font-size: 2rem; padding: 1rem;" href="catalog/prixosh.html"id="a22">Мебель для прихожей</a>
+            </div>
+            <div class="text-center">
+                <img src="images/133.jpg" alt="Двери" class="w-full h-48 object-cover rounded-xl">
+                
+                <a class="mt-2 text-lg font-medium" style="color: #845f51; font-size: 2rem; padding: 1rem;" href="catalog/doors.html"id=a23>Двери</a>
+    
+            </div>
+        </div>
+    </section>    
+    <section class="footer">
+       <div class="box-container">
+         <div class="box">
+            <h3 id="a24">Быстрые ссылки</h3>
+            <a href="home.html" id="a6"><i class="ri-arrow-right-line" ></i>Главное Меню</a>
+            <a href="products.html" id="a7"><i class="ri-arrow-right-line" ></i>Мебели</a>
+            <a href="about.html" id="a8"><i class="ri-arrow-right-line"></i>О нас</a>
+            <a href="team.html" id="a9"><i class="ri-arrow-right-line" ></i>Команда</a>
+            <a href="services.html" id="a10"><i class="ri-arrow-right-line" ></i>Услуги</a>
+            <a href="contact.html" id="a11"><i class="ri-arrow-right-line" ></i>Контакт</a>
+         </div>
+            
+            <div class="box">
+                <h3 class="a25">Сотциальная сети</h3>
+                <a href="#"><i class="ri-facebook-fill"></i>Facebook</a>
+                <a href="#"><i class="ri-telegram-fill"></i>Telegram</a>
+                <a href="#"><i class="ri-instagram-fill"></i>Instagram</a>
+
+            </div>
+            <div class="forms">
+                <h3 id="a26">Для связи с нами</h3>
+                <form action="#" class="al">
+                    <input class="input" id="a27" type="name" placeholder="Введите свое имя" >
+                    <div class="phone-input-wrapper">
+                        <input class="input" type="tel" id="phone" name="phone" pattern="\d{9}"  placeholder="+998" required>
+                    </div>
+                    <textarea class="input" id="a28" cols="30" rows="10" placeholder="Введите ваше сообщение" ></textarea>
+                    <button id="a30" type="submit" class="btn">Отправить</button>
+        </div> 
+
+    <section class="credit">
+        <p>Created by <span >Akmal</span> | All rights reserved!</p>
+        <div class="credit">
+            <p>Designed by <span>Akmal</span></p>
+        </div>
+    </section>
+       </div>
+       <div> 
+       </div>      
+    </section>
+    <script>
+    const translations = {
+        en: {
+           a1: "Furniture",
+              a2: "About Us",
+                a3: "Team",
+                a4: "Services",
+                a5: "Contact",
+                a6: "Main Menu",
+            a7: "Furniture",
+            a8: "About Us",
+            a9: "Team",
+            a10: "Services",
+            a11: "Contact",
+            a12: "Bedroom Furniture",
+            a13: "Living Room Furniture",
+            a14: "Soft Furniture",
+            a15: "Office Furniture",
+            a16: "Kitchen Furniture",
+            a17: "Cafe Furniture",
+            a18: "Table and Chairs",
+            a19: "Children's Furniture",
+            a20: "Wardrobe",
+            a21: "Bathroom Furniture",
+            a22: "Hallway Furniture",
+            a23: "Doors",
+            a24: "Quick Links",
+            a25: "Social Networks",
+            a26: "For contact us",
+            a27: "Enter your name",
+            a28: "Enter your message",
+            a29: "Enter your phone number",
+            a30: "Send",
+            a31: "Catalog",
+            a32: "We are the best furniture company in the world",
+            a33: "Start",
+
+    
+    
+        },
+        uz: {
+           a1: "Mebeller",
+           a2: "Biz haqimizda",
+              a3: "Jamoa",
+                a4: "Xizmatlar",
+                a5: "Bog'lanish",
+            a6: "Asosiy Menyu",
+            a7: "Mebeller",
+                a8: "Biz haqimizda",
+                a9: "Jamoa",
+                a10: "Xizmatlar",
+                a11: "Bog'lanish",
+            a12: "Yotoq mebellari",
+            a13: "Oshxona mebellari",
+            a14: "Yumshoq mebel",
+            a15: "Ofis mebellari",
+            a16: "Oshxona mebellari",
+            a17: "Kafe mebellari",
+            a18: "Stol va stullar",
+            a19: "Bolalar mebellari",
+            a20: "Garderob",
+            a21: "Vanna mebellari",
+            a22: "Kirish mebellari",
+            a23: "Eshiklar",
+            a24: "Tezkor havolalar",
+            a25: "Ijtimoiy tarmoqlar",
+            a26: "Biz bilan bog'lanish uchun",
+            a27: "Ismingizni kiriting",
+            a28: "Xabaringizni kiriting",
+            a29: "Telefon raqamingizni kiriting",
+            a30: "Yuborish",
+            a31: "Katalog",
+            a32: "Biz dunyodagi eng yaxshi mebel kompaniyasimiz",
+            a33: "Boshlash",
+
+    
+    
+        },
+        ru: {
+           a1: "Мебели",
+              a2: "О нас",
+                a3: "Команда",
+                a4: "Услуги",
+                a5: "Контакт",
+            a6: "Главное Меню",
+            a7: "Мебели",
+                a8: "О нас",
+                a9: "Команда",
+                a10: "Услуги",
+                a11: "Контакт",
+            a12: "Спальный гарнитур",
+            a13: "Гостиный гарнитур",
+            a14: "Мягкая мебель",
+
+            a15: "Офисная мебель",
+            a16: "Кухонная мебель",
+            a17: "Мебель для кафе",
+            a18: "Стол и стулья",
+            a19: "Детская мебель",
+            a20: "Гардеробная",
+            a21: "Мебель для ванной",
+            a22: "Мебель для прихожей",
+            a23: "Двери",
+            a24: "Быстрые ссылки",
+            a25: "Сотциальная сети",
+            a26: "Для связи с нами",
+            a27: "Введите свое имя",
+            a28: "Введите ваше сообщение",
+            a29: "Введите ваш номер телефона",
+            a30: "Отправить",
+            a31: "Каталог",
+            a32: "Мы лучшая мебельная компания в мире",
+            a33: "Начать",
+
+    
+        }
+    };
+    document.addEventListener('DOMContentLoaded', function() {
+    // Dropdown işlevselliği
+    const dropdowns = document.querySelectorAll('.dropdown1');
+    dropdowns.forEach(dropdown1 => {
+        const select1 = dropdown1.querySelector('.select1');
+        const caret1 = dropdown1.querySelector('.caret1');
+        const menu1 = dropdown1.querySelector('.menu1');
+        const options1 = dropdown1.querySelectorAll('.menu1 li');
+        const selected1 = dropdown1.querySelector('.selected1');
+
+        select1.addEventListener('click', () => {
+            select1.classList.toggle('select1-clicked');
+            caret1.classList.toggle('caret1-rotate');
+            menu1.classList.toggle('menu1-open');
+        });
+
+        options1.forEach(option => {
+            option.addEventListener('click', () => {
+                selected1.innerText = option.innerText;
+                select1.classList.remove('select1-clicked');
+                caret1.classList.remove('caret1-rotate');
+                menu1.classList.remove('menu1-open');
+                options1.forEach(opt => opt.classList.remove('active1'));
+                option.classList.add('active1');
+                
+                // Dil değiştirme işlevi
+                const lang = option.getAttribute('data-value');
+                setLang(lang);
+            });
+        });
+    });
+
+    // Dil değiştirme fonksiyonu
+    function setLang(lang) {
+        const elements = Object.keys(translations[lang]);
+        elements.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.textContent = translations[lang][id];
+        });
+    }
+});
+  </script>
+ </body>
+</html>
